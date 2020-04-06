@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b7b0fea-ebf6-469b-9c9a-641e340e183f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/header/shared/dropdown.directive.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/header/shared/ingredient.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/recipes/recipe.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/shopping-list/shopping-list.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@angular/common/http/http.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@angular/common/http/http.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@angular/common/http/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@angular/common/http/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/header/header.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/header/header.component.ts" afterDir="false" />
@@ -18,13 +16,8 @@
       <change beforePath="$PROJECT_DIR$/src/app/recipes/recipe-list/recipe-item/recipe-item.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipe-list/recipe-item/recipe-item.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/recipes/recipe-list/recipe-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipe-list/recipe-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/recipes/recipe-list/recipe-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipe-list/recipe-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recipes/recipe.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipe.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/recipes/recipe.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipe.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/recipes/recipes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipes.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recipes/recipes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipes.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shopping-list/shopping-edit/shopping-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shopping-list/shopping-edit/shopping-edit.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shopping-list/shopping-edit/shopping-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shopping-list/shopping-edit/shopping-edit.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shopping-list/shopping-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shopping-list/shopping-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shopping-list/shopping-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shopping-list/shopping-list.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +93,9 @@
       <workItem from="1585565138603" duration="6962000" />
       <workItem from="1585645685575" duration="5169000" />
       <workItem from="1585661537475" duration="624000" />
-      <workItem from="1585724538507" duration="4080000" />
+      <workItem from="1585724538507" duration="5663000" />
+      <workItem from="1585930294677" duration="2201000" />
+      <workItem from="1586161809689" duration="4068000" />
     </task>
     <task id="LOCAL-00001" summary="add recipes component">
       <created>1585125707110</created>
@@ -109,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585125707110</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add recipe and shopping services">
+      <created>1585836980298</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585836980298</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,7 +119,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add recipes component" />
-    <option name="LAST_COMMIT_MESSAGE" value="add recipes component" />
+    <MESSAGE value="add recipe and shopping services" />
+    <option name="LAST_COMMIT_MESSAGE" value="add recipe and shopping services" />
   </component>
   <component name="WindowStateProjectService">
     <state x="634" y="225" width="651" height="627" key="#Angular_CLI_Server" timestamp="1585565109313">
@@ -153,9 +156,10 @@
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
     <state x="624" y="246" key="run.anything.popup/0.27.1920.1027@0.27.1920.1027" timestamp="1585661271019" />
-    <state x="623" y="249" width="672" height="678" key="search.everywhere.popup" timestamp="1585570915362">
-      <screen x="0" y="27" width="1920" height="1027" />
+    <state x="1246" y="249" width="1344" height="678" key="search.everywhere.popup" timestamp="1585837240011">
+      <screen x="0" y="27" width="3840" height="1027" />
     </state>
     <state x="623" y="249" width="672" height="678" key="search.everywhere.popup/0.27.1920.1027@0.27.1920.1027" timestamp="1585570915362" />
+    <state x="1246" y="249" width="1344" height="678" key="search.everywhere.popup/0.27.3840.1027@0.27.3840.1027" timestamp="1585837240011" />
   </component>
 </project>
