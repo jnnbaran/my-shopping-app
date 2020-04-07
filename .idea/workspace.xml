@@ -3,19 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0b7b0fea-ebf6-469b-9c9a-641e340e183f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@angular/forms/forms.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@angular/forms/forms.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@angular/forms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@angular/forms/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recipes/recipe-detail/recipe-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipe-detail/recipe-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recipes/recipe-detail/recipe-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipe-detail/recipe-detail.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recipes/recipe-list/recipe-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipe-list/recipe-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recipes/recipe.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipe.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recipes/recipes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipes.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shopping-list/shopping-edit/shopping-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shopping-list/shopping-edit/shopping-edit.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shopping-list/shopping-edit/shopping-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shopping-list/shopping-edit/shopping-edit.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shopping-list/shopping-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shopping-list/shopping-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shopping-list/shopping-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shopping-list/shopping-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shopping-list/shopping-list.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shopping-list/shopping-list.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +83,7 @@
       <workItem from="1586161809689" duration="5839000" />
       <workItem from="1586242346930" duration="3653000" />
       <workItem from="1586246218760" duration="15191000" />
-      <workItem from="1586289477544" duration="189000" />
+      <workItem from="1586289477544" duration="430000" />
     </task>
     <task id="LOCAL-00001" summary="add recipes component">
       <created>1585125707110</created>
@@ -119,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586166019754</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="create the form for editing recipes">
+      <created>1586289780310</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586289780310</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +123,8 @@
     <MESSAGE value="add recipes component" />
     <MESSAGE value="add recipe and shopping services" />
     <MESSAGE value="add routing" />
-    <option name="LAST_COMMIT_MESSAGE" value="add routing" />
+    <MESSAGE value="create the form for editing recipes" />
+    <option name="LAST_COMMIT_MESSAGE" value="create the form for editing recipes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="634" y="225" width="651" height="627" key="#Angular_CLI_Server" timestamp="1585565109313">
@@ -144,19 +139,19 @@
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
     <state x="555" y="200" width="800" height="678" key="#TSLint/0.27.1920.1027@0.27.1920.1027" timestamp="1585565212356" />
-    <state x="533" y="106" width="844" height="866" key="CommitChangelistDialog2" timestamp="1586166018592">
+    <state x="533" y="106" width="844" height="866" key="CommitChangelistDialog2" timestamp="1586289778827">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
-    <state x="533" y="106" width="844" height="866" key="CommitChangelistDialog2/0.27.1920.1027@0.27.1920.1027" timestamp="1586166018592" />
+    <state x="533" y="106" width="844" height="866" key="CommitChangelistDialog2/0.27.1920.1027@0.27.1920.1027" timestamp="1586289778827" />
     <state x="232" y="106" key="CommitChangelistDialog2/0.27.3840.1027@0.27.3840.1027" timestamp="1585836965096" />
     <state x="449" y="173" width="1022" height="731" key="SettingsEditor" timestamp="1585128604330">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
     <state x="449" y="173" width="1022" height="731" key="SettingsEditor/0.27.1920.1027@0.27.1920.1027" timestamp="1585128604330" />
-    <state x="555" y="274" width="800" height="529" key="Vcs.Push.Dialog.v2" timestamp="1586166066081">
+    <state x="555" y="274" width="800" height="529" key="Vcs.Push.Dialog.v2" timestamp="1586289800954">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
-    <state x="555" y="274" width="800" height="529" key="Vcs.Push.Dialog.v2/0.27.1920.1027@0.27.1920.1027" timestamp="1586166066081" />
+    <state x="555" y="274" width="800" height="529" key="Vcs.Push.Dialog.v2/0.27.1920.1027@0.27.1920.1027" timestamp="1586289800954" />
     <state x="710" y="246" width="480" height="587" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1585078250709">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
