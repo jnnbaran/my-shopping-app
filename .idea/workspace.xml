@@ -3,21 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="0b7b0fea-ebf6-469b-9c9a-641e340e183f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@angular/common/http/http.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@angular/common/http/http.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@angular/common/http/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@angular/common/http/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@angular/forms/forms.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@angular/forms/forms.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@angular/forms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@angular/forms/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/header/header.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/recipes/recipe-detail/recipe-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipe-detail/recipe-detail.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/recipes/recipe-detail/recipe-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipe-detail/recipe-detail.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recipes/recipe-list/recipe-item/recipe-item.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipe-list/recipe-item/recipe-item.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recipes/recipe-list/recipe-item/recipe-item.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipe-list/recipe-item/recipe-item.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recipes/recipe-list/recipe-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipe-list/recipe-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/recipes/recipe-list/recipe-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipe-list/recipe-list.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/recipes/recipe.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipe.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/recipes/recipes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipes.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/recipes/recipes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/recipes/recipes.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shopping-list/shopping-edit/shopping-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shopping-list/shopping-edit/shopping-edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shopping-list/shopping-edit/shopping-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shopping-list/shopping-edit/shopping-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shopping-list/shopping-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shopping-list/shopping-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shopping-list/shopping-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shopping-list/shopping-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shopping-list/shopping-list.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shopping-list/shopping-list.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +93,10 @@
       <workItem from="1585661537475" duration="624000" />
       <workItem from="1585724538507" duration="5663000" />
       <workItem from="1585930294677" duration="2201000" />
-      <workItem from="1586161809689" duration="4068000" />
+      <workItem from="1586161809689" duration="5839000" />
+      <workItem from="1586242346930" duration="3653000" />
+      <workItem from="1586246218760" duration="15191000" />
+      <workItem from="1586289477544" duration="189000" />
     </task>
     <task id="LOCAL-00001" summary="add recipes component">
       <created>1585125707110</created>
@@ -111,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585836980298</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add routing">
+      <created>1586166019754</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586166019754</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,42 +128,47 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add recipes component" />
     <MESSAGE value="add recipe and shopping services" />
-    <option name="LAST_COMMIT_MESSAGE" value="add recipe and shopping services" />
+    <MESSAGE value="add routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="add routing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="634" y="225" width="651" height="627" key="#Angular_CLI_Server" timestamp="1585565109313">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
     <state x="634" y="225" width="651" height="627" key="#Angular_CLI_Server/0.27.1920.1027@0.27.1920.1027" timestamp="1585565109313" />
-    <state x="555" y="200" width="800" height="678" key="#Inspections" timestamp="1585658847633">
+    <state x="555" y="200" width="800" height="678" key="#Inspections" timestamp="1586268990447">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
-    <state x="555" y="200" width="800" height="678" key="#Inspections/0.27.1920.1027@0.27.1920.1027" timestamp="1585658847633" />
+    <state x="555" y="200" width="800" height="678" key="#Inspections/0.27.1920.1027@0.27.1920.1027" timestamp="1586268990447" />
     <state x="555" y="200" width="800" height="678" key="#TSLint" timestamp="1585565212356">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
     <state x="555" y="200" width="800" height="678" key="#TSLint/0.27.1920.1027@0.27.1920.1027" timestamp="1585565212356" />
-    <state x="232" y="106" width="844" height="866" key="CommitChangelistDialog2" timestamp="1585836965096">
-      <screen x="0" y="27" width="3840" height="1027" />
+    <state x="533" y="106" width="844" height="866" key="CommitChangelistDialog2" timestamp="1586166018592">
+      <screen x="0" y="27" width="1920" height="1027" />
     </state>
-    <state x="533" y="106" width="844" height="866" key="CommitChangelistDialog2/0.27.1920.1027@0.27.1920.1027" timestamp="1585125415511" />
+    <state x="533" y="106" width="844" height="866" key="CommitChangelistDialog2/0.27.1920.1027@0.27.1920.1027" timestamp="1586166018592" />
     <state x="232" y="106" key="CommitChangelistDialog2/0.27.3840.1027@0.27.3840.1027" timestamp="1585836965096" />
     <state x="449" y="173" width="1022" height="731" key="SettingsEditor" timestamp="1585128604330">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
     <state x="449" y="173" width="1022" height="731" key="SettingsEditor/0.27.1920.1027@0.27.1920.1027" timestamp="1585128604330" />
-    <state x="555" y="274" width="800" height="529" key="Vcs.Push.Dialog.v2" timestamp="1585126006314">
+    <state x="555" y="274" width="800" height="529" key="Vcs.Push.Dialog.v2" timestamp="1586166066081">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
-    <state x="555" y="274" width="800" height="529" key="Vcs.Push.Dialog.v2/0.27.1920.1027@0.27.1920.1027" timestamp="1585126006314" />
+    <state x="555" y="274" width="800" height="529" key="Vcs.Push.Dialog.v2/0.27.1920.1027@0.27.1920.1027" timestamp="1586166066081" />
     <state x="710" y="246" width="480" height="587" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1585078250709">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
     <state x="710" y="246" width="480" height="587" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.27.1920.1027@0.27.1920.1027" timestamp="1585078250709" />
-    <state x="624" y="246" key="run.anything.popup" timestamp="1585661271019">
+    <state x="732" y="458" width="445" height="161" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586166031399">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
-    <state x="624" y="246" key="run.anything.popup/0.27.1920.1027@0.27.1920.1027" timestamp="1585661271019" />
+    <state x="732" y="458" width="445" height="161" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1027@0.27.1920.1027" timestamp="1586166031399" />
+    <state x="624" y="246" key="run.anything.popup" timestamp="1586251373234">
+      <screen x="0" y="27" width="1920" height="1027" />
+    </state>
+    <state x="624" y="246" key="run.anything.popup/0.27.1920.1027@0.27.1920.1027" timestamp="1586251373234" />
     <state x="1246" y="249" width="1344" height="678" key="search.everywhere.popup" timestamp="1585837240011">
       <screen x="0" y="27" width="3840" height="1027" />
     </state>
