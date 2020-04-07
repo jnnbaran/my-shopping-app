@@ -83,7 +83,7 @@
       <workItem from="1586161809689" duration="5839000" />
       <workItem from="1586242346930" duration="3653000" />
       <workItem from="1586246218760" duration="15191000" />
-      <workItem from="1586289477544" duration="430000" />
+      <workItem from="1586289477544" duration="1079000" />
     </task>
     <task id="LOCAL-00001" summary="add recipes component">
       <created>1585125707110</created>
@@ -113,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586289780310</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="create the form for editing recipes">
+      <created>1586289954114</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586289954114</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,19 +146,19 @@
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
     <state x="555" y="200" width="800" height="678" key="#TSLint/0.27.1920.1027@0.27.1920.1027" timestamp="1585565212356" />
-    <state x="533" y="106" width="844" height="866" key="CommitChangelistDialog2" timestamp="1586289778827">
+    <state x="533" y="106" width="844" height="866" key="CommitChangelistDialog2" timestamp="1586289953633">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
-    <state x="533" y="106" width="844" height="866" key="CommitChangelistDialog2/0.27.1920.1027@0.27.1920.1027" timestamp="1586289778827" />
+    <state x="533" y="106" width="844" height="866" key="CommitChangelistDialog2/0.27.1920.1027@0.27.1920.1027" timestamp="1586289953633" />
     <state x="232" y="106" key="CommitChangelistDialog2/0.27.3840.1027@0.27.3840.1027" timestamp="1585836965096" />
     <state x="449" y="173" width="1022" height="731" key="SettingsEditor" timestamp="1585128604330">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
     <state x="449" y="173" width="1022" height="731" key="SettingsEditor/0.27.1920.1027@0.27.1920.1027" timestamp="1585128604330" />
-    <state x="555" y="274" width="800" height="529" key="Vcs.Push.Dialog.v2" timestamp="1586289800954">
+    <state x="555" y="274" width="800" height="529" key="Vcs.Push.Dialog.v2" timestamp="1586289973362">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
-    <state x="555" y="274" width="800" height="529" key="Vcs.Push.Dialog.v2/0.27.1920.1027@0.27.1920.1027" timestamp="1586289800954" />
+    <state x="555" y="274" width="800" height="529" key="Vcs.Push.Dialog.v2/0.27.1920.1027@0.27.1920.1027" timestamp="1586289973362" />
     <state x="710" y="246" width="480" height="587" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1585078250709">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
@@ -160,6 +167,10 @@
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
     <state x="732" y="458" width="445" height="161" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1027@0.27.1920.1027" timestamp="1586166031399" />
+    <state x="607" y="330" width="695" height="418" key="git4idea.merge.GitPullDialog" timestamp="1586289965275">
+      <screen x="0" y="27" width="1920" height="1027" />
+    </state>
+    <state x="607" y="330" width="695" height="418" key="git4idea.merge.GitPullDialog/0.27.1920.1027@0.27.1920.1027" timestamp="1586289965275" />
     <state x="624" y="246" key="run.anything.popup" timestamp="1586251373234">
       <screen x="0" y="27" width="1920" height="1027" />
     </state>
