@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup, NgForm, Validators} from "@angular/forms";
+import {AuthService} from "../../auth.service";
+import {HttpHeaders} from "@angular/common/http";
 
 
 @Component({
@@ -13,15 +15,19 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private authService: AuthService) {
   }
 
   ngOnInit() {
-    this.loginForm = this.fb.group({
-      password: ['', Validators.required],
-    });
   }
 
-  login(){};
+  login(formData){
+    this.authService.login(formData.value);
 
+  }
+
+  signup(formData: NgForm){
+    this.authService.signup(formData.value.email, formData.value.password);
+
+  }
 }

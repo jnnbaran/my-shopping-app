@@ -1,12 +1,11 @@
 package com.shoppingapp.demo.recipe;
 
-import com.shoppingapp.demo.profile.ProfileDTO;
-import com.shoppingapp.demo.shared.entities.User;
+import com.shoppingapp.demo.user.UserDTO;
 
 public class RecipeDTO {
 
     private Long id;
     private String name;
-    private ProfileDTO owner;
+    private UserDTO owner;
 
 }

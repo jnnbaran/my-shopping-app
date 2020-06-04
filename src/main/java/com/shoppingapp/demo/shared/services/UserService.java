@@ -1,5 +1,6 @@
 package com.shoppingapp.demo.shared.services;
 
+import com.shoppingapp.demo.home.Credentials;
 import com.shoppingapp.demo.shared.entities.User;
 import com.shoppingapp.demo.shared.repos.UserRepository;
 import org.modelmapper.ModelMapper;
@@ -19,4 +20,8 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    public void addUser(Credentials credentials) {
+        User userToAdd = modelMapper.map(credentials, User.class);
+        userRepository.save(userToAdd);
+    }
 }
