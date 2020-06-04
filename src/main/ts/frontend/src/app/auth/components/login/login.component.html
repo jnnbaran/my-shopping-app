@@ -1,7 +1,7 @@
 <div class="div row">
     <div class="col-md-6 offset-md-3 mt-4">
     <h3> Login</h3> <hr/>
-        <form (ngSubmit)="login(formData)" #formData="ngForm">
+        <form #formData="ngForm">
             <div class="form-group">
                 <label for="email">e-mail</label>
                 <input type="text" class="form-control" id="email" aria-describedby="emailHelp" ngModel name="email">
@@ -10,8 +10,8 @@
                 <label for="password">Password</label>
                 <input type="password" class="form-control" id="password" name="password" ngModel >
             </div>
-            <button type="submit" class="btn btn-primary" [disabled]="formData.invalid">Login</button>
-            <button type="button" class="btn btn-primary" (click)="signup(formData)">Zarejestruj</button>
+            <button type="button" class="btn btn-primary"  (click)="login(formData)" [disabled]="formData.invalid">Login</button>
+            <button type="button" class="btn btn-primary" (click)="register(formData)">Zarejestruj</button>
 
         </form>
     </div>

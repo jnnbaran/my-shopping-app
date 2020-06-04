@@ -2,7 +2,7 @@ package com.shoppingapp.demo.auth;
 
 
 import com.shoppingapp.demo.home.Credentials;
-import com.shoppingapp.demo.shared.services.EmailAlreadyTakenException;
+import com.shoppingapp.demo.shared.exceptions.EmailAlreadyTakenException;
 import com.shoppingapp.demo.shared.services.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

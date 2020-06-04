@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 
-import {FormBuilder, FormGroup, NgForm, Validators} from "@angular/forms";
+import {FormGroup} from "@angular/forms";
 import {AuthService} from "../../auth.service";
-import {HttpHeaders} from "@angular/common/http";
 
 
 @Component({
@@ -26,8 +25,7 @@ export class LoginComponent implements OnInit {
 
   }
 
-  signup(formData: NgForm){
-    this.authService.signup(formData.value.email, formData.value.password);
-
+  register(formData) {
+    this.authService.register(formData.value);
   }
 }
