@@ -1,6 +1,6 @@
 package com.shoppingapp.demo.shared.services;
 
-import com.shoppingapp.demo.home.Credentials;
+import com.shoppingapp.demo.auth.jwt.Credentials;
 import com.shoppingapp.demo.shared.entities.User;
 import com.shoppingapp.demo.shared.exceptions.EmailAlreadyTakenException;
 import com.shoppingapp.demo.shared.repos.UserRepository;

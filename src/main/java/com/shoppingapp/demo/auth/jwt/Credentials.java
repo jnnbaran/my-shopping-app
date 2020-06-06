@@ -1,4 +1,4 @@
-package com.shoppingapp.demo.home;
+package com.shoppingapp.demo.auth.jwt;
 
 public class Credentials {
     private String email;
