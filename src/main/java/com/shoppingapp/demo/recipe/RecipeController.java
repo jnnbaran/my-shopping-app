@@ -19,6 +19,9 @@ public class RecipeController {
         return ResponseEntity.ok().build();
     }
 
-
+    @PostMapping("/test")
+    public ResponseEntity<String> createRecipe(){
+        return ResponseEntity.ok("{\"test\": \"udało się\"}");
+    }
 
 }

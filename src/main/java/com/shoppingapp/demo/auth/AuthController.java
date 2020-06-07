@@ -5,6 +5,7 @@ import com.shoppingapp.demo.auth.jwt.JwtProvider;
 import com.shoppingapp.demo.auth.jwt.Token;
 import com.shoppingapp.demo.shared.exceptions.EmailAlreadyTakenException;
 import com.shoppingapp.demo.shared.services.UserService;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -29,10 +30,10 @@ public class AuthController {
     }
 
 
-    @PostMapping("/register")
-    public ResponseEntity<String> register(@RequestBody Credentials credentials) {
+    @PostMapping(value = "/register")
+    public ResponseEntity<Void> register(@RequestBody Credentials credentials) {
         userService.addUser(credentials);
-        return ResponseEntity.ok().body("Witamy w naszej skromnej appce");
+        return ResponseEntity.ok().build();
     }
 
     @PostMapping("/login")

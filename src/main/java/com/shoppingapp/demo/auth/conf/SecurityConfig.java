@@ -30,8 +30,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception{
         http.csrf().disable().cors().configurationSource(corsConfigurationSource())
+            .and().headers().frameOptions().disable()
             .and()
             .authorizeRequests()
+                .antMatchers("/console/**").permitAll()
                 .antMatchers("/api/auth/*").permitAll()
                 .antMatchers("/assets/*").permitAll()
                 .antMatchers("/img/*").permitAll()
@@ -68,10 +70,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public AuthenticationManager authenticationManager() throws Exception {
-        return super.authenticationManagerBean();
-    }
-
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();

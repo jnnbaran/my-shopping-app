@@ -1,9 +1,9 @@
 package com.shoppingapp.demo.auth.jwt;
 
+import com.shoppingapp.demo.auth.db.H2UserDetailsService;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -19,9 +19,9 @@ import java.io.IOException;
 public class JwtFilter extends OncePerRequestFilter {
 
     private JwtProvider tokenProvider;
-    private UserDetailsService userPrincipalDetailsService;
+    private H2UserDetailsService userPrincipalDetailsService;
 
-    public JwtFilter(JwtProvider tokenProvider, UserDetailsService userDetailsService) {
+    public JwtFilter(JwtProvider tokenProvider, H2UserDetailsService userDetailsService) {
         this.tokenProvider = tokenProvider;
         this.userPrincipalDetailsService = userDetailsService;
     }
@@ -32,9 +32,9 @@ public class JwtFilter extends OncePerRequestFilter {
             String jwt = TokenUtil.getJwtFromRequest(httpServletRequest);
 
             if (StringUtils.hasText(jwt) && tokenProvider.validateToken(jwt)) {
-                String userName = tokenProvider.getUserName(jwt);
+                Long userName = tokenProvider.getUserId(jwt);
 
-                UserDetails userDetails = userPrincipalDetailsService.loadUserByUsername(userName);
+                UserDetails userDetails = userPrincipalDetailsService.loadUserById(userName);
                 UsernamePasswordAuthenticationToken authentication =
                         new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                 authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(httpServletRequest));

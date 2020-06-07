@@ -2,7 +2,7 @@ package com.shoppingapp.demo.auth.jwt;
 
 
 
-import com.sun.security.auth.UserPrincipal;
+import com.shoppingapp.demo.auth.db.UserPrincipal;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
@@ -30,7 +30,7 @@ public class JwtProvider {
 
         return new Token(
                 Jwts.builder()
-                        .setSubject(userPrincipal.getName())
+                        .setSubject(Long.toString(userPrincipal.getId()))
                         .setIssuedAt(new Date())
                         .setExpiration(expiryDate)
                         .signWith(SignatureAlgorithm.HS256, jwtSecret)
@@ -47,12 +47,12 @@ public class JwtProvider {
         }
     }
 
-    public String getUserName(String token) {
+    public Long getUserId(String token) {
         Claims claims = Jwts.parser()
                 .setSigningKey(jwtSecret)
                 .parseClaimsJws(token)
                 .getBody();
 
-        return claims.getSubject();
+        return Long.parseLong(claims.getSubject());
     }
 }
