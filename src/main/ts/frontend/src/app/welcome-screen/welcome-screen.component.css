@@ -1,0 +1,15 @@
+
+.title-image {
+    width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+    object-position: 60% 0;
+}
+
+h1 {
+    color: cornflowerblue;
+    font-family: 'Amatic SC', cursive;
+    font-size: 3.5em;
+    margin-left: 0.4em;
+    margin-right: 0.1em;
+}

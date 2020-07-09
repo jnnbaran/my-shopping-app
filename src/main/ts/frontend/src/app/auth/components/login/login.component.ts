@@ -1,8 +1,9 @@
-import {Component, OnDestroy} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 
-import {FormGroup} from "@angular/forms";
+import {FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "../../providers/auth.service";
 import {Subscription} from "rxjs";
+import {TokenModel} from "../../models/token.model";
 
 
 @Component({
@@ -11,7 +12,7 @@ import {Subscription} from "rxjs";
     styleUrls: ['./login.component.css']
 })
 
-export class LoginComponent implements OnDestroy {
+export class LoginComponent implements OnInit {
     loginSub: Subscription;
     registerSub: Subscription;
     loginForm: FormGroup;
@@ -28,7 +29,8 @@ export class LoginComponent implements OnDestroy {
     register(formData) {
         this.registerSub = this.authService.register(formData.value)
             .subscribe(() => console.log("udalo sie zalogować i zarejstrować!"),
-                error => console.log(error))
+                error => console.log(error));
+
     }
 
     logout() {
@@ -39,8 +41,12 @@ export class LoginComponent implements OnDestroy {
         this.authService.test().subscribe(json => alert(json.test));
     }
 
-    ngOnDestroy(): void {
-        this.loginSub.unsubscribe();
-        this.registerSub.unsubscribe();
-    }
+   // ngOnDestroy(): void {
+    //    this.loginSub.unsubscribe();
+    //    this.registerSub.unsubscribe();
+   // }
+
+    ngOnInit() {
+    };
+
 }

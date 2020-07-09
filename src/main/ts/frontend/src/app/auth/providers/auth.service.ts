@@ -12,11 +12,22 @@ import {switchMap, tap, timeout} from "rxjs/operators";
 export class AuthService {
 
     private _isLoginIn = new BehaviorSubject(false);
+    private tokenExpirationTimer: number;
+
     get isLoginIn(): Observable<boolean> {
         return this._isLoginIn.asObservable();
     }
 
     constructor(private http: HttpClient) {
+        if (localStorage.getItem('access_token')) {
+            const token: TokenModel = new TokenModel().merge(JSON.parse(localStorage.getItem('access_token')));
+            if (token.hasNotExpired()) {
+                this._isLoginIn.next(true);
+                this.addAutoLogout(token.expirationDuration());
+            } else {
+                this.logout();
+            }
+        }
     }
 
     register(formValue) {
@@ -44,5 +55,11 @@ export class AuthService {
 
     test() {
        return  this.http.post<any>("http://localhost:8080/api/recipe/test", {})
+    }
+
+    addAutoLogout(expirationDuration : number) {
+        this.tokenExpirationTimer = setTimeout(() => {
+            this.logout();
+        }, expirationDuration);
     }
 }

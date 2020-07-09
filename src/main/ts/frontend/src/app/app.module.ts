@@ -20,6 +20,8 @@ import {RecipeService} from "./recipes/recipe.service";
 import {AuthModule} from "./auth/auth.module";
 import {AuthService} from "./auth/providers/auth.service";
 import {TokenInterceptorService} from "./auth/providers/token-interceptor.service";
+import { WelcomeScreenComponent } from './welcome-screen/welcome-screen.component';
+import {AuthGuardService} from "./auth/providers/auth-guard.service";
 
 
 @NgModule({
@@ -35,6 +37,7 @@ import {TokenInterceptorService} from "./auth/providers/token-interceptor.servic
         DropdownDirective,
         RecipeStartComponent,
         RecipeEditComponent,
+        WelcomeScreenComponent,
     ],
     imports: [
         BrowserModule,
@@ -53,7 +56,8 @@ import {TokenInterceptorService} from "./auth/providers/token-interceptor.servic
             provide: HTTP_INTERCEPTORS,
             useClass: TokenInterceptorService,
             multi: true
-        }
+        },
+        AuthGuardService,
     ],
     bootstrap: [AppComponent]
 })

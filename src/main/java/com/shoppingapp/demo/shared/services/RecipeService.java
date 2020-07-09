@@ -28,9 +28,9 @@ public class RecipeService {
     }
 
     public void createRecipe(RecipeDTO recipeDTO){
-      //  User user = userService.getCurrentAuthenticatedUser();
+      // User user = userService.getCurrentAuthenticatedUser();
         Recipe recipe = modelMapper.map(recipeDTO, Recipe.class);
-    //    recipe.setOwner(user);
+       // recipe.setOwner(user);
         recipeRepository.save(recipe);
     }
 }

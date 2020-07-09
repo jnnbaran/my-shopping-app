@@ -38,6 +38,7 @@ public class User extends BaseEntity {
         this.lastName = lastName;
     }
 
+    @Column(nullable = false)
     public String getEmail() {
         return email;
     }
@@ -46,6 +47,7 @@ public class User extends BaseEntity {
         this.email = email;
     }
 
+    @Column(nullable = false)
     public String getPassword() {
         return password;
     }

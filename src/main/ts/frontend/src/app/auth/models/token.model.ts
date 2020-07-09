@@ -11,6 +11,7 @@ export class TokenModel {
     }
 
     merge(partial: Partial<TokenModel>): TokenModel {
+        // noinspection TypeScriptValidateTypes
         return Object.assign(this, partial);
     }
 
