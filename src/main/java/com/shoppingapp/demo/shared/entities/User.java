@@ -1,56 +1,25 @@
 package com.shoppingapp.demo.shared.entities;
 
-import javax.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import java.util.List;
 
+@Getter
+@Setter
 @Entity
 public class User extends BaseEntity {
 
-    private List<Recipe> ownedRecipes;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String password;
-
-
     @OneToMany(mappedBy = "owner")
-    public List<Recipe> getOwnedRecipes(){
-        return ownedRecipes;
-    }
+    private List<Recipe> ownedRecipes;
 
-    public void setOwnedRecipes(List<Recipe> ownedRecipes){
-        this.ownedRecipes = ownedRecipes;
-    }
+    private String firstName;
 
-    public String getFirstName() {
-        return firstName;
-    }
+    private String lastName;
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+    private String email;
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
+    private String password;
 }
