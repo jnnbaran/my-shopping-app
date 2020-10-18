@@ -1,0 +1,12 @@
+{
+  "defaultProject": "my-shopping-app",
+  "projects": {
+    "my-shopping-app": {
+      "name": "my-shopping-app",
+      "integrations": {
+        "capacitor": {}
+      },
+      "type": "angular"
+    }
+  }
+}
