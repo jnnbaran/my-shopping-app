@@ -1,27 +1,52 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 
-
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormGroup, Validators} from "@angular/forms";
+import {AuthService} from "../../providers/auth.service";
+import {Subscription} from "rxjs";
+import {TokenModel} from "../../models/token.model";
 
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css']
 })
 
 export class LoginComponent implements OnInit {
-  loginForm: FormGroup;
+    loginSub: Subscription;
+    registerSub: Subscription;
+    loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
-  }
+    constructor(private authService: AuthService) {
+    }
 
-  ngOnInit() {
-    this.loginForm = this.fb.group({
-      password: ['', Validators.required],
-    });
-  }
+    login(formData) {
+        this.loginSub = this.authService.login(formData.value)
+            .subscribe(() => console.log("udalo sie zalogować!"),
+                error => console.log(error));
+    }
 
-  login(){};
+    register(formData) {
+        this.registerSub = this.authService.register(formData.value)
+            .subscribe(() => console.log("udalo sie zalogować i zarejstrować!"),
+                error => console.log(error));
+
+    }
+
+    logout() {
+        this.authService.logout();
+    }
+
+    test() {
+        this.authService.test().subscribe(json => alert(json.test));
+    }
+
+   // ngOnDestroy(): void {
+    //    this.loginSub.unsubscribe();
+    //    this.registerSub.unsubscribe();
+   // }
+
+    ngOnInit() {
+    };
 
 }

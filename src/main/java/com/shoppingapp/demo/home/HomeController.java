@@ -17,11 +17,6 @@ public class HomeController {
         return "/index.html";
     }
 
-    @GetMapping("/login")
-    public String getLoginView() {
-        return "/index.html";
-    }
-
     @GetMapping("/null")
     public String getNull() {
         return "/index.html";

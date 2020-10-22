@@ -13,12 +13,15 @@ public class RecipeController {
 
     private RecipeService recipeService;
 
-    @PostMapping("/create")
+    @PostMapping("/add")
     public ResponseEntity<Void> createRecipe(@RequestBody RecipeDTO recipeDTO){
         recipeService.createRecipe(recipeDTO);
         return ResponseEntity.ok().build();
     }
 
-
+    @PostMapping("/test")
+    public ResponseEntity<String> createRecipe(){
+        return ResponseEntity.ok("{\"test\": \"udało się\"}");
+    }
 
 }

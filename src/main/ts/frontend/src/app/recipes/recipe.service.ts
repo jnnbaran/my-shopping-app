@@ -3,11 +3,13 @@ import {Injectable} from "@angular/core";
 import {Ingredient} from "../header/shared/ingredient.model";
 import {ShoppingListService} from "../shopping-list/shopping-list.service";
 import {Subject} from "rxjs";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({providedIn: 'root'})
 export class RecipeService {
     recipesChanged = new Subject<Recipe[]>();
-     constructor(private slService: ShoppingListService) {}
+
+     constructor(private slService: ShoppingListService, private http: HttpClient) {}
 
 
     private recipes: Recipe [] = [
@@ -41,7 +43,9 @@ export class RecipeService {
    }
 
    addRecipe(recipe: Recipe){
-        this.recipes.push(recipe);
+       this.http.post("http://localhost:8080/api/recipe/add", recipe).subscribe();
+
+       this.recipes.push(recipe);
         this.recipesChanged.next(this.recipes.slice());
    }
 

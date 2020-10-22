@@ -39,6 +39,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.modelmapper</groupId>
@@ -46,9 +47,9 @@
             <version>2.3.7</version>
         </dependency>
         <dependency>
-            <groupId>com.adeptj</groupId>
-            <artifactId>adeptj-modules-websecurity-jwt</artifactId>
-            <version>1.0.9.Final</version>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.0</version>
         </dependency>
     </dependencies>
 

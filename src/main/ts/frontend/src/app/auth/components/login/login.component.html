@@ -1,17 +1,22 @@
 <div class="div row">
     <div class="col-md-6 offset-md-3 mt-4">
     <h3> Login</h3> <hr/>
-        <form>
+        <form #formData="ngForm">
             <div class="form-group">
-                <label for="loginUsername">Username</label>
-                <input type="text" class="form-control" id="loginUsername" aria-describedby="emailHelp">
+                <label for="email">e-mail</label>
+                <input type="text" class="form-control" id="email" aria-describedby="emailHelp" ngModel name="email">
             </div>
             <div class="form-group">
-                <label for="loginPassword">Password</label>
-                <input type="password" class="form-control" id="loginPassword">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" ngModel >
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="button" class="btn btn-primary"  (click)="login(formData)" [disabled]="formData.invalid">Login</button>
+            <button type="button" class="btn btn-primary" (click)="register(formData)">Zarejestruj</button>
+            <button type="button" class="btn btn-primary" (click)="logout()">Wyloguj</button>
+
         </form>
+        <hr>
+        <button class="btn btn-primary" (click)="test()">get protected resource</button>
     </div>
 </div>
 
