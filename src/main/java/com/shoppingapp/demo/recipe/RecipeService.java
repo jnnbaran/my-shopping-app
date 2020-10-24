@@ -1,6 +1,5 @@
-package com.shoppingapp.demo.shared.services;
-import com.shoppingapp.demo.shared.services.UserService;
-import com.shoppingapp.demo.recipe.RecipeDTO;
+package com.shoppingapp.demo.recipe;
+import com.shoppingapp.demo.profile.UserService;
 import com.shoppingapp.demo.shared.entities.Recipe;
 import com.shoppingapp.demo.shared.entities.User;
 import com.shoppingapp.demo.shared.repos.RecipeRepository;
@@ -11,6 +10,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -18,8 +19,7 @@ public class RecipeService {
 
     private final ModelMapper modelMapper;
     private final RecipeRepository recipeRepository;
-    private  final UserService userService;
-
+    private final UserService userService;
 
     public RecipeService(ModelMapper modelMapper, RecipeRepository recipeRepository,  UserService userService) {
         this.modelMapper = modelMapper;
@@ -27,10 +27,17 @@ public class RecipeService {
         this.userService = userService;
     }
 
+    public List<RecipeDTO> getUserRecipes(long id) {
+        return recipeRepository.findAllByOwner_Id(id)
+                .stream()
+                .map(recipe -> modelMapper.map(recipe, RecipeDTO.class))
+                .collect(Collectors.toList());
+    }
+
     public void createRecipe(RecipeDTO recipeDTO){
-      // User user = userService.getCurrentAuthenticatedUser();
+        User user = userService.getCurrentUser();
         Recipe recipe = modelMapper.map(recipeDTO, Recipe.class);
-       // recipe.setOwner(user);
+        recipe.setOwner(user);
         recipeRepository.save(recipe);
     }
 }

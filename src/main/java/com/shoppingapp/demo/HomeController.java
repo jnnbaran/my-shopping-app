@@ -1,4 +1,4 @@
-package com.shoppingapp.demo.home;
+package com.shoppingapp.demo;
 
 
 import org.springframework.stereotype.Controller;

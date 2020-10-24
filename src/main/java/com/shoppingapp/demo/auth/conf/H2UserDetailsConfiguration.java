@@ -18,5 +18,4 @@ public class H2UserDetailsConfiguration {
         provider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
         return provider;
     }
-
 }

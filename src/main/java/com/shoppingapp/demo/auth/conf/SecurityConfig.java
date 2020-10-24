@@ -1,6 +1,5 @@
 package com.shoppingapp.demo.auth.conf;
 
-import com.shoppingapp.demo.auth.JsonEntryPoint;
 import com.shoppingapp.demo.auth.jwt.JwtFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -42,12 +41,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/*.svg").permitAll()
                 .antMatchers("/").permitAll()
                 .anyRequest().authenticated()
-                .and()
-                .exceptionHandling().authenticationEntryPoint(jsonEntryPoint)
-                .and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
+                .and().exceptionHandling().authenticationEntryPoint(jsonEntryPoint)
+                .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and().addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .headers().cacheControl();
     }
 

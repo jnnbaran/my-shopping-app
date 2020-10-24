@@ -1,7 +1,6 @@
 package com.shoppingapp.demo.auth.jwt;
 
 
-
 import com.shoppingapp.demo.auth.db.UserPrincipal;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.SignatureAlgorithm;

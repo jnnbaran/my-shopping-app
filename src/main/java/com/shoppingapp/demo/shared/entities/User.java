@@ -3,9 +3,9 @@ package com.shoppingapp.demo.shared.entities;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 @Getter
@@ -20,9 +20,9 @@ public class User extends BaseEntity {
 
     private String lastName;
 
-    @Column(nullable = false)
+    @NotBlank
     private String email;
 
-    @Column(nullable = false)
+    @NotBlank
     private String password;
 }

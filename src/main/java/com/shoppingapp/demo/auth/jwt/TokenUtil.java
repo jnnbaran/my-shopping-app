@@ -12,7 +12,8 @@ public class TokenUtil {
     @Value("jedzonko")
     private static String jwtSecret;
 
-    private TokenUtil() { }
+    private TokenUtil() {
+    }
 
     static String getJwtFromRequest(HttpServletRequest request) {
         String bearerToken = request.getHeader("Authorization");

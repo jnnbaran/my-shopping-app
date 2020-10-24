@@ -1,4 +1,4 @@
-package com.shoppingapp.demo.auth;
+package com.shoppingapp.demo.auth.conf;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
