@@ -11,18 +11,16 @@ export class DataStorageService{
     stroreRecipes(){
         const recipes = this.recipeService.getRecipes();
         return  this.http
-            .put(
-                'https://my-shopping-app-4d1f4.firebaseio.com/recipes.json',
+            .post(
+                'http://localhost:8080/api/recipes/save',
                 recipes
             )
-            .subscribe(response => {
-                console.log(response);
-            });
+            .subscribe(console.log);
     }
 
     fetchRecipes() {
         this.http
-            .get<Recipe[]>('https://my-shopping-app-4d1f4.firebaseio.com/recipes.json')
+            .get<Recipe[]>('http://localhost:8080/api/recipes/')
             .subscribe(recipes => {
                 console.log(recipes);
                 this.recipeService.setRecipes(recipes);

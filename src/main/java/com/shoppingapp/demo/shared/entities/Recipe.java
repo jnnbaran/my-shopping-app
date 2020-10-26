@@ -3,6 +3,7 @@ package com.shoppingapp.demo.shared.entities;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -19,6 +20,9 @@ public class Recipe extends BaseEntity {
 
     @NotBlank
     private String name;
+
+    @Column(columnDefinition = "TEXT")
+    private String imagePath;
 
     private String description;
 

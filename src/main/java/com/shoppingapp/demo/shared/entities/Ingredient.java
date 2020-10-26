@@ -15,7 +15,7 @@ public class Ingredient {
 
     @NotBlank
     @Size(max = 100)
-    private String ingredientName;
+    private String name;
 
     private int amount;
 }

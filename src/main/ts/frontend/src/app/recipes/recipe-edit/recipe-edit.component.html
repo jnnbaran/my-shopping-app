@@ -15,11 +15,20 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12">
+            <div class="row" style="display: flex; align-items: center;">
+                <div class="col-xs-8">
                     <div class="form-group">
                         <label for="imagePath">Image URL</label>
                         <input type="text" id="imagePath" class="form-control" formControlName="imagePath" #imagePath>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div>
+                        <button class="btn btn-primary" type="button" (click)="fileInput.click()">wybierz</button>
+                        <input type="file"
+                               class="hidden"
+                               #fileInput (change)="pickPicture($event)">
+                        <button type="button" (click)="takePicture()" class="btn btn-primary">zrób</button>
                     </div>
                 </div>
             </div>

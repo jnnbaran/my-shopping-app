@@ -43,7 +43,6 @@ export class RecipeService {
    }
 
    addRecipe(recipe: Recipe){
-       this.http.post("http://localhost:8080/api/recipe/add", recipe).subscribe();
 
        this.recipes.push(recipe);
         this.recipesChanged.next(this.recipes.slice());

@@ -1,10 +1,11 @@
 package com.shoppingapp.demo.recipe;
+
 import com.shoppingapp.demo.profile.UserService;
+import com.shoppingapp.demo.recipe.dto.RecipeDTO;
 import com.shoppingapp.demo.shared.entities.Recipe;
 import com.shoppingapp.demo.shared.entities.User;
 import com.shoppingapp.demo.shared.repos.RecipeRepository;
 import org.modelmapper.ModelMapper;
-
 
 
 import org.springframework.stereotype.Service;
@@ -21,7 +22,7 @@ public class RecipeService {
     private final RecipeRepository recipeRepository;
     private final UserService userService;
 
-    public RecipeService(ModelMapper modelMapper, RecipeRepository recipeRepository,  UserService userService) {
+    public RecipeService(ModelMapper modelMapper, RecipeRepository recipeRepository, UserService userService) {
         this.modelMapper = modelMapper;
         this.recipeRepository = recipeRepository;
         this.userService = userService;
@@ -34,10 +35,13 @@ public class RecipeService {
                 .collect(Collectors.toList());
     }
 
-    public void createRecipe(RecipeDTO recipeDTO){
+    public void saveRecipes(List<RecipeDTO> recipeDTO) {
         User user = userService.getCurrentUser();
-        Recipe recipe = modelMapper.map(recipeDTO, Recipe.class);
-        recipe.setOwner(user);
-        recipeRepository.save(recipe);
+        List<Recipe> recipes = recipeDTO.stream()
+                .map(dto -> modelMapper.map(dto, Recipe.class))
+                .collect(Collectors.toList());
+        recipes.forEach(recipe -> recipe.setOwner(user));
+        recipeRepository.deleteAllByOwner_Id(user.getId());
+        recipeRepository.saveAll(recipes);
     }
 }

@@ -1,14 +1,14 @@
 package com.shoppingapp.demo.recipe;
 
 import com.shoppingapp.demo.profile.UserService;
-import com.shoppingapp.demo.shared.entities.User;
+import com.shoppingapp.demo.recipe.dto.RecipeDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("api/recipe")
+@RequestMapping("api/recipes")
 public class RecipeController {
 
     private UserService userService;
@@ -26,15 +26,9 @@ public class RecipeController {
                         userService.getCurrentUser().getId()));
     }
 
-    @PostMapping("/add")
-    public ResponseEntity<Void> createRecipe(@RequestBody RecipeDTO recipeDTO) {
-        recipeService.createRecipe(recipeDTO);
+    @PostMapping("/save")
+    public ResponseEntity<Void> createRecipe(@RequestBody List<RecipeDTO> recipeDTO) {
+        recipeService.saveRecipes(recipeDTO);
         return ResponseEntity.ok().build();
-    }
-
-    @PostMapping("/test")
-    public ResponseEntity<String> createRecipe() {
-        User user = userService.getCurrentUser();
-        return ResponseEntity.ok(String.format("{\"test\": \"udało się %s\" }", user.getEmail()));
     }
 }
