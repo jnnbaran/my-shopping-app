@@ -10,13 +10,11 @@
                 <label for="password">Password</label>
                 <input type="password" class="form-control" id="password" name="password" ngModel >
             </div>
-            <button type="button" class="btn btn-primary"  (click)="login(formData)" [disabled]="formData.invalid">Login</button>
+            <button type="button" class="btn btn-primary"  (click)="login(formData)" [disabled]="formData.invalid">Zaloguj</button>
             <button type="button" class="btn btn-primary" (click)="register(formData)">Zarejestruj</button>
-            <button type="button" class="btn btn-primary" (click)="logout()">Wyloguj</button>
 
         </form>
         <hr>
-        <button class="btn btn-primary" (click)="test()">get protected resource</button>
     </div>
 </div>
 

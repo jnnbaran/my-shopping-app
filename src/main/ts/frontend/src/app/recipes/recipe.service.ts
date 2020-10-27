@@ -1,9 +1,9 @@
-import {Recipe} from "./recipe.model";
-import {Injectable} from "@angular/core";
-import {Ingredient} from "../header/shared/ingredient.model";
-import {ShoppingListService} from "../shopping-list/shopping-list.service";
-import {Subject} from "rxjs";
-import {HttpClient} from "@angular/common/http";
+import {Recipe} from './recipe.model';
+import {Injectable} from '@angular/core';
+import {Ingredient} from '../header/shared/ingredient.model';
+import {ShoppingListService} from '../shopping-list/shopping-list.service';
+import {Subject} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({providedIn: 'root'})
 export class RecipeService {
@@ -26,34 +26,33 @@ export class RecipeService {
 
     ];
 
-    setRecipes(recipes: Recipe[]){
+    setRecipes(recipes: Recipe[]) {
         this.recipes = recipes;
         this.recipesChanged.next(this.recipes.slice());
     }
 
-    addIngredientsToShoppingList(ingredients: Ingredient[]){
-        this.slService.addIngredients(ingredients);
+    addIngredientsToShoppingList(id: number) {
+        this.slService.addIngredients(this.getRecipe(id).ingredientsList);
     }
 
-    getRecipe(id: number){
+    getRecipe(id: number) {
         return this.recipes.slice()[id];
     }
-   getRecipes(){
+   getRecipes() {
        return this.recipes.slice();
    }
 
-   addRecipe(recipe: Recipe){
-
+   addRecipe(recipe: Recipe) {
        this.recipes.push(recipe);
-        this.recipesChanged.next(this.recipes.slice());
+       this.recipesChanged.next(this.recipes.slice());
    }
 
-   updateRecipe(index: number, newRecipe: Recipe){
+   updateRecipe(index: number, newRecipe: Recipe) {
         this.recipes[index] = newRecipe;
         this.recipesChanged.next(this.recipes.slice());
    }
 
-   deleteRecipe(index: number){
+   deleteRecipe(index: number) {
         this.recipes.splice(index, 1);
         this.recipesChanged.next(this.recipes.slice());
 

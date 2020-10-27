@@ -24,11 +24,9 @@
                 </div>
                 <div class="col-xs-4">
                     <div>
-                        <button class="btn btn-primary" type="button" (click)="fileInput.click()">wybierz</button>
-                        <input type="file"
-                               class="hidden"
-                               #fileInput (change)="pickPicture($event)">
-                        <button type="button" (click)="takePicture()" class="btn btn-primary">zrób</button>
+                        <ion-button type="button" (click)="takePicture()">
+                            <ion-icon slot="icon-only" name="camera"></ion-icon>
+                        </ion-button>
                     </div>
                 </div>
             </div>

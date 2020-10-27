@@ -1,9 +1,9 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-import {FormGroup, Validators} from "@angular/forms";
-import {AuthService} from "../../providers/auth.service";
-import {Subscription} from "rxjs";
-import {TokenModel} from "../../models/token.model";
+import {FormGroup} from '@angular/forms';
+import {AuthService} from '../../providers/auth.service';
+import {Subscription} from 'rxjs';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -17,18 +17,18 @@ export class LoginComponent implements OnInit {
     registerSub: Subscription;
     loginForm: FormGroup;
 
-    constructor(private authService: AuthService) {
+    constructor(private authService: AuthService, private router: Router) {
     }
 
     login(formData) {
         this.loginSub = this.authService.login(formData.value)
-            .subscribe(() => console.log("udalo sie zalogować!"),
+            .subscribe(() => this.router.navigate(['recipes']),
                 error => console.log(error));
     }
 
     register(formData) {
         this.registerSub = this.authService.register(formData.value)
-            .subscribe(() => console.log("udalo sie zalogować i zarejstrować!"),
+            .subscribe(() => console.log('udalo sie zalogować i zarejstrować!'),
                 error => console.log(error));
 
     }
@@ -47,6 +47,6 @@ export class LoginComponent implements OnInit {
    // }
 
     ngOnInit() {
-    };
+    }
 
 }

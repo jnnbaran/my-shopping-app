@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {TokenModel} from "../models/token.model";
-import {BehaviorSubject, Observable} from "rxjs";
-import {switchMap, tap, timeout} from "rxjs/operators";
+import {HttpClient} from '@angular/common/http';
+import {TokenModel} from '../models/token.model';
+import {BehaviorSubject, Observable} from 'rxjs';
+import {switchMap, tap, timeout} from 'rxjs/operators';
+import {environment} from '../../../environments/environment';
 
 
 @Injectable({
@@ -31,12 +32,12 @@ export class AuthService {
     }
 
     register(formValue) {
-        return this.http.post<string>("http://localhost:8080/api/auth/register", formValue)
+        return this.http.post<string>(environment.api + 'auth/register', formValue)
             .pipe(switchMap(() => this.login(formValue)));
     }
 
     login(formValue) {
-        return this.http.post<TokenModel>("http://localhost:8080/api/auth/login", formValue)
+        return this.http.post<TokenModel>(environment.api + 'auth/login', formValue)
             .pipe(
                 timeout(2000),
                 tap(token => this.addAccessToken(new TokenModel().merge(token))),
@@ -54,10 +55,10 @@ export class AuthService {
     }
 
     test() {
-       return  this.http.post<any>("http://localhost:8080/api/recipe/test", {})
+       return  this.http.post<any>(environment.api + 'recipe/test', {});
     }
 
-    addAutoLogout(expirationDuration : number) {
+    addAutoLogout(expirationDuration: number) {
         this.tokenExpirationTimer = setTimeout(() => {
             this.logout();
         }, expirationDuration);
